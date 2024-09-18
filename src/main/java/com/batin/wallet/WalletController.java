@@ -1,5 +1,6 @@
 package com.batin.wallet;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +15,7 @@ public class WalletController {
     private final WalletService service;
 
     @PostMapping
-    public Wallet changeBalance(@RequestBody ChangeBalanceRequest request) {
+    public Wallet changeBalance(@Valid @RequestBody ChangeBalanceRequest request) {
         return service.changeBalance(request);
     }
 
@@ -24,7 +25,7 @@ public class WalletController {
     }
 
     @PostMapping("/new")
-    public Wallet addWallet(@RequestBody WalletDto walletDto) {
+    public Wallet addWallet(@Valid @RequestBody WalletDto walletDto) {
         return service.addWallet(walletDto);
     }
 

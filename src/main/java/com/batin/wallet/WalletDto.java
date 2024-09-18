@@ -1,5 +1,7 @@
 package com.batin.wallet;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,5 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class WalletDto {
 
-    private int balance;
+    @Min(value = 0, message = "Balance should be positive")
+    @NotNull(message = "Balance cannot be null")
+    private Long balance;
 }
