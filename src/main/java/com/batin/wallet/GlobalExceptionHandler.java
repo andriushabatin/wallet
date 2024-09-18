@@ -17,28 +17,28 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Map<String, String>> handleValidationException(
-            MethodArgumentNotValidException ex
+            MethodArgumentNotValidException e
     ) {
         Map<String, String> errors = new HashMap<>();
-        ex.getBindingResult().getFieldErrors().forEach(error ->
+        e.getBindingResult().getFieldErrors().forEach(error ->
                 errors.put(error.getField(), error.getDefaultMessage()));
 
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(HttpMessageNotReadableException.class)
-    public ResponseEntity<Map<String, String>> handleHttpMessageNotReadableException(HttpMessageNotReadableException ex, WebRequest request) {
+    public ResponseEntity<Map<String, String>> handleHttpMessageNotReadableException(HttpMessageNotReadableException e, WebRequest request) {
         Map<String, String> errors = new HashMap<>();
         errors.put("error", "Is not valid JSON");
-        errors.put("error details", ex.getMessage());
+        errors.put("error details", e.getMessage());
 
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<Map<String, String>> handleRuntimeException(RuntimeException ex) {
+    public ResponseEntity<Map<String, String>> handleRuntimeException(RuntimeException e) {
         Map<String, String> errors = new HashMap<>();
-        errors.put("error", ex.getMessage());
+        errors.put("error", e.getMessage());
 
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
     }

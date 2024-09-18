@@ -20,5 +20,5 @@ public class Wallet {
     @Id
     @GeneratedValue
     private UUID id;
-    private long balance;
+    private Double balance;
 }

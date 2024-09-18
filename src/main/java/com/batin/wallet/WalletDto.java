@@ -15,5 +15,5 @@ public class WalletDto {
 
     @Min(value = 0, message = "Balance should be positive")
     @NotNull(message = "Balance cannot be null")
-    private Long balance;
+    private Double balance;
 }
