@@ -1,5 +1,7 @@
-package com.batin.wallet;
+package com.batin.wallet.mapper;
 
+import com.batin.wallet.model.Wallet;
+import com.batin.wallet.model.WalletDto;
 import org.springframework.stereotype.Component;
 
 @Component

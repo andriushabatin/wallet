@@ -1,5 +1,9 @@
-package com.batin.wallet;
+package com.batin.wallet.controller;
 
+import com.batin.wallet.service.WalletService;
+import com.batin.wallet.model.ChangeBalanceRequest;
+import com.batin.wallet.model.Wallet;
+import com.batin.wallet.model.WalletDto;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

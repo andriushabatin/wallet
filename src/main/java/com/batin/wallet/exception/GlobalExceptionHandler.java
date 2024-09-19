@@ -1,4 +1,4 @@
-package com.batin.wallet;
+package com.batin.wallet.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

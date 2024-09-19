@@ -1,4 +1,4 @@
-package com.batin.wallet;
+package com.batin.wallet.model;
 
 import jakarta.persistence.*;
 

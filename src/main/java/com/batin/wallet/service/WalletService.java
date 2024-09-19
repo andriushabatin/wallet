@@ -1,5 +1,10 @@
-package com.batin.wallet;
+package com.batin.wallet.service;
 
+import com.batin.wallet.mapper.WalletMapper;
+import com.batin.wallet.repository.WalletRepository;
+import com.batin.wallet.model.ChangeBalanceRequest;
+import com.batin.wallet.model.Wallet;
+import com.batin.wallet.model.WalletDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

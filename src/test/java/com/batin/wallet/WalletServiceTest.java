@@ -1,5 +1,12 @@
 package com.batin.wallet;
 
+import com.batin.wallet.enums.OperationType;
+import com.batin.wallet.mapper.WalletMapper;
+import com.batin.wallet.model.ChangeBalanceRequest;
+import com.batin.wallet.model.Wallet;
+import com.batin.wallet.model.WalletDto;
+import com.batin.wallet.repository.WalletRepository;
+import com.batin.wallet.service.WalletService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

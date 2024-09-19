@@ -1,5 +1,6 @@
-package com.batin.wallet;
+package com.batin.wallet.model;
 
+import com.batin.wallet.enums.OperationType;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
