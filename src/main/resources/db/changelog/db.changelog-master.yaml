@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: add uuid-ossp
+      author: andrew batin
+      changes:
+        - sql:
+            splitStatements: false
+            stripComments: true
+            sql: "CREATE EXTENSION IF NOT EXISTS \"uuid-ossp\";"
+  - include:
+      file: db/changelog/changeset/create-wallet-table.yaml
