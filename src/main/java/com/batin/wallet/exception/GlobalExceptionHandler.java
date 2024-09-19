@@ -50,6 +50,4 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(errors, HttpStatus.NOT_FOUND);
     }
-
-
 }
